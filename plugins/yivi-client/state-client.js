@@ -215,7 +215,7 @@ module.exports = class YiviStateClient {
               ? {
                   transition: 'showQRCode',
                   payload: {
-                    qr: JSON.stringify(this._mappings.sessionPtr),
+                    qr: `https://irma.app/-/session#${encodeURIComponent(JSON.stringify(this._mappings.sessionPtr))}`,
                     showBackButton: prevTransition === 'chooseQR',
                   },
                 }
